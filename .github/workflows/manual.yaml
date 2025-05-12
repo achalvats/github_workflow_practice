@@ -22,10 +22,10 @@ jobs:
     steps:
       - name: Decode File Content
         run: |
-          echo "${{input.data}}" | base64 --decode > ./decode_file.txt
+          echo "${{ input.data }}" | base64 --decode > ./decode_file.txt
       - name: Display greeting
         run: |
-          echo "${{input.greeting}}, $ {{input.name}}!"
+          echo "${{ input.greeting }}, $ {{ input.name }}!"
       - name: Display File Content
         run: |
           echo "Contents of the file:"
