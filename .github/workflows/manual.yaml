@@ -11,10 +11,10 @@ on:
         description: "Type of greeting"
         required: true
         type: string
-      data:
-        description: "Base64 encode content of a file"
-        required: false
-        type: string
+      # data:
+      #   description: "Base64 encode content of a file"
+      #   required: false
+      #   type: string
 
 jobs:
   greet:
@@ -26,8 +26,8 @@ jobs:
       - name: Display greeting
         run: |
           echo "${{ inputs.greeting }}, ${{ inputs.name }}!"
-      - name: Display File Content
-        run: |
-          echo "Contents of the file:"
-          cat .decode_file.txt
+      # - name: Display File Content
+      #   run: |
+      #     echo "Contents of the file:"
+      #     cat .decode_file.txt
 
