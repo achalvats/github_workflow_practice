@@ -5,13 +5,14 @@ on:
     types:
       - webhook
 
-
 jobs:
   respond-to-dispatch-1:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-      - name: Run a script
+      - name: Print event details
         run: |
-        echo "Event of type: $GITHUB_EVENT_NAME"
+          echo "Triggered by event: ${{ github.event.action }}"
+          echo "Full payload:"
+          echo '${{ toJson(github.event) }}'
