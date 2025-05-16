@@ -1,0 +1,14 @@
+name: conditionam workflow
+on: [push]
+jobs:
+  hello_world:
+    if: github.repository == 'octo-org/octo-repo-prod'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Hello World'
+        run: Echo "Hey, how are you"
+  goodbye_moon:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Goodbye Moon'
+        run: Echo "Bye Bye"
