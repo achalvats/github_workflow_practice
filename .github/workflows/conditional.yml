@@ -2,7 +2,7 @@ name: conditionam workflow
 on: [push]
 jobs:
   hello_world:
-    if: github.repository == 'octo-org/octo-repo-prod'
+    if: github.repository == 'achalvats/github_workflow_practice'
     runs-on: ubuntu-latest
     steps:
       - name: 'Hello World'
