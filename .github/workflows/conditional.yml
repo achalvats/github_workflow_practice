@@ -6,9 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Hello World'
-        run: Echo "Hey, how are you"
+        run: echo "Hey, how are you"
   goodbye_moon:
     runs-on: ubuntu-latest
     steps:
       - name: 'Goodbye Moon'
-        run: Echo "Bye Bye"
+        run: echo "Bye Bye"
