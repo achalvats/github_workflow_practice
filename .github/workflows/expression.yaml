@@ -1,0 +1,22 @@
+name: Expression workflow example
+
+on:
+    push:
+        branches:
+            - main
+    issues:
+        types: [opened, labeled]
+
+jobs:
+    expression_function:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check if the string contains substring
+              if: contains('Hello world', 'llo')
+              run: echo "The string contains the substring."
+            - name: Check if the string starts with
+              if: startsWith('Hello World', 'Hel')
+              run: echo "The string starts with the word 'He'."
+            - name: Check if string ends with
+              if: endsWith('Hello world', 'rld')
+              run: echo "The string end with 'rld'."
